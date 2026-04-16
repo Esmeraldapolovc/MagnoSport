@@ -1,0 +1,604 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper principal */
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #CF152D 0%,
+    #E81733 20%,
+    #EC4158 40%,
+    #F06A7C 60%,
+    #F494A1 80%,
+    #F06A7C 85%,
+    #EC4158 90%,
+    #CF152D 100%
+  );
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card principal */
+.card {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Lado del formulario */
+.form-side {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.98);
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -20px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Estilos del formulario */
+.input-group {
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para inputs normales (correo) */
+.input-group input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+  border-color: #EC4158;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(236, 65, 88, 0.1);
+}
+
+/* Contenedor para el campo de contraseña con el ojo DENTRO */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Input de contraseña - con padding derecho para el ojo */
+.password-wrapper input {
+  width: 100%;
+  padding: 14px 45px 14px 18px !important; /* Espacio a la derecha para el ojo */
+  font-size: 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  background: #f9fafb;
+  transition: border-color 0.2s ease;
+}
+
+.password-wrapper input:focus {
+  border-color: #EC4158;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(236, 65, 88, 0.1);
+}
+
+/* Botón del ojo DENTRO del campo */
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.password-toggle-btn:focus {
+  outline: none;
+}
+
+.password-toggle-btn:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos de ojo en SVG */
+.eye-icon {
+  stroke: #666;
+  stroke-width: 2;
+  fill: none;
+  transition: stroke 0.2s ease;
+}
+
+.password-toggle-btn:hover .eye-icon {
+  stroke: #CF152D;
+}
+
+/* Botón de submit */
+.submit-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: #CF152D;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #b01226;
+  box-shadow: 0 10px 20px -5px rgba(207, 21, 45, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Lado de la imagen - se oculta en móvil */
+.image-side {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+/* Placeholder mientras carga la imagen */
+.image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  z-index: 1;
+}
+
+.image-placeholder-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #CF152D;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.illustration {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.95) contrast(1.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.illustration.loaded {
+  opacity: 1;
+}
+
+/* Overlay simplificado */
+.image-side::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.4) 20%,
+    rgba(0, 0, 0, 0.2) 40%,
+    rgba(0, 0, 0, 0.1) 60%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.image-title {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  padding: 0 20px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 280px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  padding: 0 20px;
+}
+
+/* SPLASH SCREEN CON ANIMACIÓN DE 4 SEGUNDOS */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #CF152D 0%, #E81733 50%, #CF152D 100%);
+  background-size: 200% 200%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+  animation: gradientBG 5s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fade-exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-content {
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+}
+
+/* ANIMACIÓN DEL LOGO - 4 SEGUNDOS */
+.splash-logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: scale(0.5);
+  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+}
+
+.splash-logo.animate {
+  animation: logoReveal 3.5s ease-out forwards;
+}
+
+@keyframes logoReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  }
+  20% {
+    opacity: 0.6;
+    transform: scale(1.1) rotate(3deg);
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
+  }
+  60% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));
+  }
+  80% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  }
+}
+
+/* Barra de carga */
+.splash-loader {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInLoader 0.5s ease 2s forwards;
+}
+
+@keyframes fadeInLoader {
+  to { opacity: 1; }
+}
+
+.splash-loader-bar {
+  height: 100%;
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  animation: loading 2s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(200%); }
+  100% { transform: translateX(400%); }
+}
+
+/* Responsive - OCULTAR IMAGEN EN MÓVIL */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    min-height: auto;
+    max-width: 450px;
+  }
+
+  /* OCULTAR COMPLETAMENTE LA IMAGEN EN MÓVIL */
+  .image-side {
+    display: none !important;
+  }
+
+  .form-side {
+    padding: 30px 24px;
+    border-radius: 24px;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .splash-logo {
+    max-width: 150px;
+  }
+  
+  .splash-logo.animate {
+    animation: logoRevealMobile 3.2s ease-out forwards;
+  }
+  
+  @keyframes logoRevealMobile {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(-8deg);
+    }
+    20% {
+      opacity: 0.6;
+      transform: scale(1.08) rotate(3deg);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    60% {
+      transform: scale(1.05);
+    }
+    80% {
+      transform: scale(1.01);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Ajustes para móvil - mantener ojo dentro del campo */
+  .password-wrapper input {
+    padding: 12px 40px 12px 16px !important;
+  }
+  
+  .password-toggle-btn {
+    right: 8px;
+    padding: 6px;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .form-side {
+    padding: 25px 20px;
+  }
+
+  .logo {
+    max-width: 130px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .submit-btn {
+    padding: 14px 20px;
+  }
+}
+
+/* Mensaje de error */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffebee; /* Rojo pastel */
+  border: 1px solid #ffcdd2;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 320px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-icon {
+  flex-shrink: 0;
+  stroke: #d32f2f;
+  fill: none;
+  stroke-width: 2;
+}
+
+.error-icon circle {
+  stroke: #d32f2f;
+}
+
+.error-icon line {
+  stroke: #d32f2f;
+}
+
+.error-message span {
+  color: #d32f2f;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Estilo para inputs con error */
+.input-error {
+  border-color: #d32f2f !important;
+  background-color: #fff5f5 !important;
+}
+
+.input-error:focus {
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .error-message {
+    padding: 10px 14px;
+    max-width: 100%;
+  }
+  
+  .error-message span {
+    font-size: 13px;
+  }
+}

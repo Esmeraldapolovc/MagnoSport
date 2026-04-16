@@ -1,0 +1,128 @@
+/* assets/styles/Alert.css */
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.custom-alert-success {
+  background: #ffebee;
+  border: 2px solid #ffcdd2;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(207, 21, 45, 0.2);
+}
+
+.custom-alert-error {
+  background: #ffebee;
+  border: 2px solid #ef9a9a;
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 30px rgba(207, 21, 45, 0.2);
+}
+
+.alert-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-width: 280px;
+}
+
+.alert-icon {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+
+/* Estilos para el icono de éxito */
+.custom-alert-success .alert-icon {
+  color: #4caf50;
+}
+
+.custom-alert-success .alert-circle {
+  stroke: currentColor;
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+  animation: drawCircle 0.5s ease-out forwards;
+}
+
+.custom-alert-success .alert-check {
+  stroke: currentColor;
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+  animation: drawCheck 0.5s ease-out 0.3s forwards;
+}
+
+/* Estilos para el icono de error */
+.custom-alert-error .alert-icon {
+  color: #f44336;
+}
+
+.custom-alert-error .alert-circle {
+  stroke: currentColor;
+}
+
+.custom-alert-error .alert-cross {
+  stroke: currentColor;
+  animation: drawCross 0.3s ease-out forwards;
+}
+
+@keyframes drawCircle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCheck {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawCross {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.alert-message {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #b71c1c;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+/* Animación de salida */
+.custom-alert.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
