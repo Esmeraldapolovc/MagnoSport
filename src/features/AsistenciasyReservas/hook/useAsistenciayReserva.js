@@ -61,13 +61,12 @@ const useAsistenciasReservas = () => {
     }
   }, []);
 
-  // 🔹 Registrar asistencia
+  //  Registrar asistencia
   const handleRegistrarAsistencia = useCallback(async (idReserva) => {
   setLoading(true);
   setError(null);
   try {
     const response = await registrarAsistencia(idReserva);
-    // ✅ Devolver la respuesta completa para que el componente la use
     return response;
   } catch (err) {
     setError(err);

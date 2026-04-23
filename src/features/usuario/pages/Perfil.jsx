@@ -394,7 +394,7 @@ export default function Perfil() {
         </div>
 
         <div className="perfil-grid">
-          {/* Tarjeta de perfil - Versión corregida */}
+          {/* Tarjeta de perfil  */}
           <div className="perfil-card">
             <div className="perfil-avatar">
               <div className="avatar-wrapper">

@@ -46,7 +46,7 @@ export const useHorario = () => {
 
       const response = await crearHorarioService(nuevoHorario);
 
-      // 🔄 Opcional: recargar lista
+      // Opcional: recargar lista
       await obtenerHorarios();
 
       return response;

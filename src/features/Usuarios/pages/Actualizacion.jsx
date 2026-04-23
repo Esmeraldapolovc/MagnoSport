@@ -394,7 +394,7 @@ export default function Actualizacion() {
         </div>
 
         <div className="editar-grid">
-          {/* Sidebar con foto - Versión mejorada */}
+          {/* Sidebar con foto */}
           <div className="editar-sidebar">
             <div className="profile-card">
               <div className="profile-avatar">
@@ -490,7 +490,7 @@ export default function Actualizacion() {
             </div>
           </div>
 
-          {/* Formulario principal - Versión mejorada */}
+          {/* Formulario principal  */}
           <div className="editar-main">
             <div className="form-header">
               <h2>Información del Alumno</h2>

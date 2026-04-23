@@ -11,7 +11,7 @@ import "../../../assets/styles/ListaAlumnos.css";
 export default function ListaAlumnos() {
   const navigate = useNavigate();
   const { alumnos, loading, error, buscarAlumnos } = useListado('alumnos');
-  const { eliminar } = useActualizar(); // Importar eliminar
+  const { eliminar } = useActualizar(); 
   const { obtenerNiveles, obtenerLicenciaturas } = useCatalogos();
   
   const [niveles, setNiveles] = useState([]);
@@ -29,7 +29,7 @@ export default function ListaAlumnos() {
   
   const filtroBtnRef = useRef(null);
   const panelRef = useRef(null);
-  const searchInputRef = useRef(null); // Referencia para el input de búsqueda
+  const searchInputRef = useRef(null); 
 
   const handleEditar = (alumno) => {
     navigate('/actualizar', { 
@@ -188,7 +188,6 @@ export default function ListaAlumnos() {
     cargarTodosLosAlumnos();
   };
 
-  // ELIMINAMOS EL USEEFFECT QUE APLICABA FILTROS AUTOMÁTICAMENTE
   // Ahora los filtros solo se aplican con el botón "Aplicar filtros"
 
   // Nueva función para manejar la búsqueda con Enter

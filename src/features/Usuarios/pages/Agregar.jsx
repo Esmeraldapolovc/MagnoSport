@@ -280,7 +280,7 @@ export default function Agregar() {
         </div>
 
         <div className="agregar-grid">
-          {/* Sidebar con foto - Mismo estilo que Actualizacion */}
+          {/* Sidebar con foto */}
           <div className="agregar-sidebar">
             <div className="profile-card">
               <div className="profile-avatar">
@@ -386,7 +386,7 @@ export default function Agregar() {
             </div>
           </div>
 
-          {/* Formulario principal - Mismo estilo que Actualizacion */}
+          {/* Formulario principal  */}
           <div className="agregar-main">
             <div className="form-header">
               <h2>Información del Usuario</h2>

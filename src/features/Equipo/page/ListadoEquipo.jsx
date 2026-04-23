@@ -275,13 +275,13 @@ const ListadoEquipo = () => {
     }
   };
 
-  // Abrir modal de eliminar (cambiar estado a Fuera de servicio)
+  // Abrir modal de eliminar
   const handleEliminarClick = (equipo) => {
     setEquipoSeleccionado(equipo);
     setShowDeleteModal(true);
   };
 
-  // Confirmar eliminación (cambiar estado a Fuera de servicio)
+  // Confirmar eliminación 
   const handleConfirmarEliminar = async () => {
     if (!equipoSeleccionado) return;
     
@@ -518,7 +518,7 @@ const ListadoEquipo = () => {
           </div>
         )}
 
-        {/* Modal para eliminar (cambiar estado a Fuera de servicio) */}
+        {/* Modal para eliminar  */}
         {showDeleteModal && equipoSeleccionado && (
           <div className="confirm-dialog-overlay">
             <div className="confirm-dialog">

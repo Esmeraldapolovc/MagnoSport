@@ -15,7 +15,7 @@ export const useUsuarioPerfil = () => {
       
       // Si ya tenemos los datos en cache, devolverlos sin hacer petición
       if (globalUserCache[cacheKey]) {
-        console.log("✅ USANDO CACHE para usuario:", cacheKey);
+        console.log(" USANDO CACHE para usuario:", cacheKey);
         return globalUserCache[cacheKey];
       }
       

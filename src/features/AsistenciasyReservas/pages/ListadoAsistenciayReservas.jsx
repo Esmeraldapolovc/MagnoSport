@@ -283,7 +283,6 @@ const handleRegistrarAsistenciaClick = useCallback(async (idReserva, e) => {
     
     console.log("Respuesta del backend:", response);
     
-    // ✅ CORREGIDO: Verificar la respuesta correctamente
     // El backend devuelve: { idReserva, mensaje, nuevo_estado }
     const exito = response?.nuevo_estado === "Asistió" || 
                   response?.mensaje?.includes("confirmada") ||

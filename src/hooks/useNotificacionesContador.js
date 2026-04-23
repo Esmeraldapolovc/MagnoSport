@@ -20,7 +20,7 @@ const useNotificacionesContador = () => {
       const data = await listadoNoticia();
       console.log("Datos obtenidos de listadoNoticia:", data);
       
-      // ✅ Usar fecha local en lugar de UTC
+      // Usar fecha local en lugar de UTC
       const fechaActual = obtenerFechaLocal();
       console.log("Fecha actual (YYYY-MM-DD):", fechaActual);
       

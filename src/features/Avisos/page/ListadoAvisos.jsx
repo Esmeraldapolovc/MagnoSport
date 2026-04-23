@@ -188,7 +188,7 @@ const ListadoAvisos = () => {
     return titulo?.charAt(0).toUpperCase() || 'N';
   };
 
-  // Función corregida para formatear fecha SIN problemas de zona horaria
+  // Función  para formatear fecha SIN problemas de zona horaria
   const formatearFecha = (fecha) => {
     if (!fecha) return "—";
     // Parsear manualmente para evitar el desfase de zona horaria

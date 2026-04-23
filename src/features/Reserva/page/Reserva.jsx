@@ -518,7 +518,6 @@ export default function Reserva() {
       limpiarFormulario();
       await cargarSemana(fechaActual);
     } catch (err) {
-      // El error ya se establece en el hook
     }
   };
 
@@ -641,7 +640,6 @@ const handleRegistrarUso = async (idReservaEquipo, estadoActual) => {
             await obtenerDetalle(detalle.id_reserva);
         }
     } catch (err) {
-        // El error ya viene con el mensaje del backend desde el hook
         const errorMessage = err.message || 'Error al registrar uso';
         console.error('Error en registro de uso:', errorMessage);
         
@@ -856,12 +854,12 @@ const handleRegistrarUso = async (idReservaEquipo, estadoActual) => {
                       <div className="dia-card-stats">
                         {misReservas > 0 && (
                           <span className="stats-badge mis-reservas">
-                            🟢 {misReservas} {misReservas === 1 ? 'reserva' : 'reservas'}
+                             {misReservas} {misReservas === 1 ? 'reserva' : 'reservas'}
                           </span>
                         )}
                         {disponibles > 0 && (
                           <span className="stats-badge disponibles">
-                            🔵 {disponibles} disponibles
+                             {disponibles} disponibles
                           </span>
                         )}
                       </div>

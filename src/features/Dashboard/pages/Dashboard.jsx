@@ -345,7 +345,7 @@ export default function Dashboard() {
           )}
         </div>
 
-        {/* Tabla 2 - Reservas por hora - CORREGIDA */}
+        {/* Tabla 2 - Reservas por hora  */}
         <div className="table-card">
           <div className="table-title">
             <div>

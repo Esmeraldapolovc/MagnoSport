@@ -114,7 +114,7 @@ const crearReservaParaUsuario = useCallback(async (reservaData) => {
     setError(null);
     setSuccess(null);
     
-    // ✅ CORREGIDO: Validar idUsuario
+    //  Validar idUsuario
     if (!reservaData.idUsuario) {
         setError('Se requiere el ID del usuario para crear la reserva');
         setLoading(false);
@@ -329,7 +329,6 @@ const buscarHorario = useCallback(async (fecha) => {
             const result = await agregarEquipoAdicional(idReserva, idEquipo);
             setSuccess('Equipo agregado exitosamente');
             
-            // CORREGIDO: Usar id_reserva en lugar de idReserva
             if (detalle?.id_reserva === idReserva) {
                 await obtenerDetalle(idReserva);
             }
