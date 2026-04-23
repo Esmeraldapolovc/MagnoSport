@@ -16,14 +16,14 @@
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px; /* Reducido de 15px */
+  gap: 12px; 
 }
 
 .menu-btn {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px; /* Reducido de 6px */
+  padding: 4px; 
   border-radius: 6px;
   transition: background-color 0.3s ease;
   line-height: 1;
@@ -34,31 +34,31 @@
 }
 
 .hamburger-icon {
-  font-size: 22px; /* Reducido de 24px */
+  font-size: 22px; 
   color: #333;
   display: block;
 }
 
 .nav-logo {
-  width: 90px; /* Reducido ligeramente de 100px */
-  height: 90px; /* Reducido ligeramente de 100px */
+  width: 90px; 
+  height: 90px; 
   object-fit: contain;
-  margin: -12px 0; /* Más margen negativo para centrar */
+  margin: -12px 0; 
 }
 
 /* Lado derecho */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 20px; /* Reducido de 25px */
+  gap: 20px; 
 }
 
 /* Perfil de usuario */
 .user-profile {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reducido de 15px */
-  padding: 2px 6px; /* Reducido de 3px 8px */
+  gap: 10px; 
+  padding: 2px 6px; 
   border-radius: 40px;
   transition: background-color 0.3s ease;
 }
@@ -75,24 +75,24 @@
 
 .user-name {
   font-weight: 600;
-  font-size: 14px; /* Reducido de 15px */
+  font-size: 14px; 
   color: #333;
   line-height: 1.2;
 }
 
 .user-role {
-  font-size: 10px; /* Reducido de 11px */
+  font-size: 10px; 
   color: #CF152D;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.3px; /* Reducido */
+  letter-spacing: 0.3px; 
   line-height: 1.1;
 }
 
 /* Círculo del avatar */
 .avatar-circle {
-  width: 38px; /* Reducido de 42px */
-  height: 38px; /* Reducido de 42px */
+  width: 38px; 
+  height: 38px; 
   border-radius: 50%;
   background: linear-gradient(135deg, #CF152D, #EC4158);
   display: flex;
@@ -100,7 +100,7 @@
   justify-content: center;
   overflow: hidden;
   border: 2px solid white;
-  box-shadow: 0 2px 5px rgba(207, 21, 45, 0.2); /* Sombra más sutil */
+  box-shadow: 0 2px 5px rgba(207, 21, 45, 0.2); 
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -121,23 +121,23 @@
   background: linear-gradient(135deg, #CF152D, #EC4158);
   color: white;
   border: none;
-  border-radius: 25px; /* Reducido de 30px */
-  padding: 6px 16px; /* Reducido de 8px 20px */
-  font-size: 13px; /* Reducido de 14px */
+  border-radius: 25px; 
+  padding: 6px 16px; 
+  font-size: 13px; 
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px; /* Reducido de 8px */
+  gap: 6px; 
   transition: all 0.3s ease;
-  box-shadow: 0 3px 8px rgba(207, 21, 45, 0.2); /* Sombra más sutil */
+  box-shadow: 0 3px 8px rgba(207, 21, 45, 0.2); 
   border: 1px solid rgba(255, 255, 255, 0.2);
   line-height: 1.1;
 }
 
 .logout-btn:hover {
   background: linear-gradient(135deg, #b81228, #d62f4a);
-  transform: translateY(-1px); /* Reducido de -2px */
+  transform: translateY(-1px); 
   box-shadow: 0 4px 12px rgba(207, 21, 45, 0.3);
 }
 
@@ -147,18 +147,18 @@
 }
 
 .logout-icon {
-  font-size: 14px; /* Reducido de 16px */
+  font-size: 14px; 
 }
 
 .logout-text {
-  letter-spacing: 0.3px; /* Reducido */
+  letter-spacing: 0.3px; 
 }
 
 /* Menú desplegable */
 /* Estilos para el menú desplegable del Dashboard */
 .navbar-laptop .dropdown-menu {
   position: absolute;
-  top: 60px; /* Ajusta según la altura de tu navbar */
+  top: 60px; 
   left: 20px;
   background: white;
   border-radius: 12px;
@@ -267,8 +267,8 @@
 
 @media (max-width: 768px) {
   .navbar-laptop {
-    padding: 4px 12px; /* Mantenido pero más compacto */
-    min-height: 52px; /* Reducido de 60px */
+    padding: 4px 12px; 
+    min-height: 52px; 
   }
 
   .logout-text {
@@ -276,42 +276,41 @@
   }
 
   .logout-btn {
-    padding: 6px 10px; /* Reducido de 8px 12px */
+    padding: 6px 10px; 
   }
 
   .user-name {
-    font-size: 12px; /* Reducido de 13px */
+    font-size: 12px; 
   }
 
   .user-role {
-    font-size: 9px; /* Reducido de 10px */
+    font-size: 9px; 
   }
 
   .avatar-circle {
-    width: 32px; /* Reducido de 36px */
-    height: 32px; /* Reducido de 36px */
-  }
+    width: 32px; 
+    height: 32px; 
 
   .dropdown-menu {
-    top: 46px; /* Reducido de 52px */
+    top: 46px; 
     left: 12px;
-    min-width: 170px; /* Reducido de 180px */
+    min-width: 170px;
   }
 
   .nav-logo {
-    width: 70px; /* Reducido de 90px */
+    width: 70px; 
     height: 70px;
     margin: -10px 0;
   }
   
   .nav-left {
-    gap: 8px; /* Reducido de 12px */
+    gap: 8px; 
   }
 }
 
 @media (max-width: 480px) {
   .navbar-laptop {
-    padding: 3px 10px; /* Aún más delgado */
+    padding: 3px 10px; 
     min-height: 48px;
   }
 
@@ -320,13 +319,13 @@
   }
 
   .nav-logo {
-    width: 60px; /* Reducido pero manteniendo legibilidad */
+    width: 60px; 
     height: 60px;
     margin: -8px 0;
   }
 
   .hamburger-icon {
-    font-size: 18px; /* Reducido de 20px */
+    font-size: 18px; 
   }
 
   .menu-btn {
@@ -334,30 +333,29 @@
   }
 
   .avatar-circle {
-    width: 28px; /* Reducido de 32px */
-    height: 28px; /* Reducido de 32px */
-    border-width: 1.5px; /* Borde más delgado */
+    width: 28px; 
+    height: 28px; 
+    border-width: 1.5px; 
   }
 
   .dropdown-menu {
-    top: 42px; /* Reducido de 48px */
+    top: 42px; 
     left: 10px;
-    min-width: 150px; /* Reducido de 160px */
+    min-width: 150px;
     padding: 4px 0;
   }
 
   .menu-item {
-    padding: 6px 12px; /* Más compacto */
-    font-size: 12px; /* Reducido de 13px */
+    padding: 6px 12px; 
+    font-size: 12px;
     gap: 6px;
   }
   
   .nav-right {
-    gap: 12px; /* Reducido de 15px */
+    gap: 12px;
   }
 }
 
-/* Hacer que el avatar sea clickable */
 .avatar-circle.clickable {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;

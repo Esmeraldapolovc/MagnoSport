@@ -150,7 +150,6 @@
   cursor: not-allowed;
 }
 
-/* Leyenda simplificada */
 .horario-leyenda {
   display: flex;
   gap: 24px;
@@ -202,7 +201,7 @@
 
 /* Nueva clase para días sin ID (gris más fuerte) */
 .horario-tabla td.bloque-cell.sin-id {
-  background: #9CA3AF;  /* Gris más oscuro */
+  background: #9CA3AF; 
 }
 
 /* Opcional: también para la leyenda */
@@ -225,7 +224,7 @@
   border-collapse: separate;
   border-spacing: 4px 2px;
   min-width: 900px;
-  table-layout: fixed; /* Forzar ancho fijo */
+  table-layout: fixed;
 }
 
 .horario-tabla th {
@@ -248,9 +247,8 @@
   z-index: 10;
 }
 
-/* TODOS los días con el MISMO ancho */
 .dia-col {
-  width: 120px; /* Ancho fijo para todos los días */
+  width: 120px; 
   min-width: 120px;
   max-width: 120px;
 }
@@ -295,7 +293,7 @@
 /* CUADROS - TODOS DEL MISMO TAMAÑO */
 .bloque-cell {
   height: 32px;
-  width: 100%; /* Ocupa todo el ancho de la celda */
+  width: 100%; 
   border-radius: 6px;
   transition: all 0.15s ease;
   cursor: pointer;
@@ -579,13 +577,12 @@
   }
 
   .dia-col {
-    width: 100px; /* Un poco más pequeño en móvil */
+    width: 100px; 
     min-width: 100px;
     max-width: 100px;
   }
 }
 
-/* Agrega al final del archivo CSS */
 
 .btn-excepcion {
   padding: 10px 20px;
